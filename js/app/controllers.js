@@ -1,6 +1,8 @@
 var myApp = angular.module('myApp',[])
   myApp.controller('controllerOne',function($scope){
-
+  	$scope.compteur = function(){
+  		$scope.textarea.length
+  	};
   });
 
 //Creation d'une application de note :
