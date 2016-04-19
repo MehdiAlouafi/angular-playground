@@ -2,6 +2,7 @@ var myApp = angular.module('myApp',[])
   myApp.controller('controllerOne',function($scope){
     $scope.messageNote = '';
     $scope.longueurMax = 100;
+    
     $scope.compteur = function(){
       $scope.caracRestant = $scope.longueurMax - $scope.textarea.length
 
@@ -15,12 +16,14 @@ var myApp = angular.module('myApp',[])
     }
     $scope.addText = function(){
         $scope.messageNote = $scope.textarea;
-
+        $scope.info1 = "Note sauvegardée"
     }
     $scope.clear = function(){
       $scope.textarea = "";
       $scope.messageNote = "";
       $scope.caracRestant = "";
+      $scope.info1 = "Aucune note dispo"
+
     }
 
   });
