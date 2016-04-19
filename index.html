@@ -9,12 +9,12 @@
 </head>
 <body ng-controller="controllerOne">
   <form >
-    <textarea rows="8" cols="40" ng-model="textarea" ng-change="compteur()"></textarea>
+    <textarea  rows="8" cols="40" ng-model="textarea" ng-change="compteur()"></textarea>
     <input data-ng-disabled="paulineWinner()" type="submit" value="envoyer" ng-model="envoyer" ng-click="addText()">
     <input type="submit" value="effacer" ng-click="clear()">
   </form>
   <div class="carac-restant" >
-    <span class=""> {{caracRestant}}</span><br>
+    <span ng-class="baseClass"> {{caracRestant}}</span><br>
     {{messageNote}}
     </div>
   <div class="info-note">

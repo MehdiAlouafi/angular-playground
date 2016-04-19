@@ -1,3 +1,11 @@
+span {
+  transition: all 0.3s ease;
+}
 .red {
   color: red;
+  font-size: 22px;
+}
+
+.green {
+  color: green;
 }

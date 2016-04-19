@@ -1,11 +1,18 @@
 var myApp = angular.module('myApp',[])
   myApp.controller('controllerOne',function($scope){
+    $scope.baseClass ='';
     $scope.messageNote = '';
     $scope.longueurMax = 100;
-    
+
     $scope.compteur = function(){
       $scope.caracRestant = $scope.longueurMax - $scope.textarea.length
+      if($scope.caracRestant < 0){
+        $scope.baseClass ='red';
 
+      } else {
+        $scope.baseClass ='green';
+
+      }
   	};
     $scope.paulineWinner = function(){
       if($scope.caracRestant <= 0){
@@ -36,7 +43,7 @@ var myApp = angular.module('myApp',[])
 // - OK if effacer clicked = efface msg
 
 /*OK MessageNote : variable stockant le contenant de la note
-info :message affiché (modifié,sauvegardé...)
+OK info :message affiché (modifié,sauvegardé...)
 OK save() OK :Met à jour le modèle (messageNote)
 OK clear():vide messageNote
 OK compteur() :calcule le nombre de caractères restants (sur 100)
