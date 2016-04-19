@@ -6,8 +6,16 @@ var myApp = angular.module('myApp',[])
       $scope.caracRestant = $scope.longueurMax - $scope.textarea.length
 
   	};
+    $scope.paulineWinner = function(){
+      if($scope.caracRestant <= 0){
+        return true
+      } else {
+        return false
+      }
+    }
     $scope.addText = function(){
-      $scope.messageNote = $scope.textarea;
+        $scope.messageNote = $scope.textarea;
+
     }
     $scope.clear = function(){
       $scope.textarea = "";
@@ -19,15 +27,14 @@ var myApp = angular.module('myApp',[])
 
 
 //Creation d'une application de note :
-// - Savoir combien de carac restant
-// - bouton submit qui marche selon le nbr de caract
-// - recuperation du text et push dans un tableau
+// - ok Savoir combien de carac restant
+// - OK  bouton submit qui marche selon le nbr de caract
 // - if submitt click -> bull info = notif (ng-class)
-// - if effacer clicked = efface msg
+// - OK if effacer clicked = efface msg
 
-/*MessageNote : variable stockant le contenant de la note
+/*OK MessageNote : variable stockant le contenant de la note
 info :message affiché (modifié,sauvegardé...)
-save() OK :Met à jour le modèle (messageNote)
-clear():vide messageNote
-compteur() :calcule le nombre de caractères restants (sur 100)
+OK save() OK :Met à jour le modèle (messageNote)
+OK clear():vide messageNote
+OK compteur() :calcule le nombre de caractères restants (sur 100)
 */
