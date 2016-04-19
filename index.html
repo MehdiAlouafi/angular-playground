@@ -11,14 +11,14 @@
   <form >
     <textarea rows="8" cols="40" ng-model="textarea" ng-change="compteur()"></textarea>
     <input type="submit" value="envoyer" ng-model="envoyer" ng-click="addText()">
-    <input type="submit" value="effacer">
+    <input type="submit" value="effacer" ng-click="clear()">
   </form>
   <div class="carac-restant" >
     {{caracRestant}}<br>
     {{messageNote}}
     </div>
   <div class="info-note">
-
+    
   </div>
 </body>
 </html>

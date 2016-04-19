@@ -9,7 +9,14 @@ var myApp = angular.module('myApp',[])
     $scope.addText = function(){
       $scope.messageNote = $scope.textarea;
     }
+    $scope.clear = function(){
+      $scope.textarea = "";
+      $scope.messageNote = "";
+      $scope.caracRestant = "";
+    }
+
   });
+
 
 //Creation d'une application de note :
 // - Savoir combien de carac restant
