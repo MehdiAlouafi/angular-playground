@@ -8,14 +8,15 @@
   <title>Angular - Workshop</title>
 </head>
 <body ng-controller="controllerOne">
-  <form>
+  <form >
     <textarea rows="8" cols="40" ng-model="textarea" ng-change="compteur()"></textarea>
-    <input type="submit" value="envoyer">
+    <input type="submit" value="envoyer" ng-model="envoyer" ng-click="addText()">
     <input type="submit" value="effacer">
   </form>
   <div class="carac-restant" >
-    {{caracRestant}}
-  </div>
+    {{caracRestant}}<br>
+    {{messageNote}}
+    </div>
   <div class="info-note">
 
   </div>

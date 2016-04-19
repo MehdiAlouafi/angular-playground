@@ -1,10 +1,14 @@
 var myApp = angular.module('myApp',[])
   myApp.controller('controllerOne',function($scope){
+    $scope.messageNote = '';
     $scope.longueurMax = 100;
     $scope.compteur = function(){
       $scope.caracRestant = $scope.longueurMax - $scope.textarea.length
 
   	};
+    $scope.addText = function(){
+      $scope.messageNote = $scope.textarea;
+    }
   });
 
 //Creation d'une application de note :
@@ -16,7 +20,7 @@ var myApp = angular.module('myApp',[])
 
 /*MessageNote : variable stockant le contenant de la note
 info :message affiché (modifié,sauvegardé...)
-save() :Met à jour le modèle (messageNote)
+save() OK :Met à jour le modèle (messageNote)
 clear():vide messageNote
 compteur() :calcule le nombre de caractères restants (sur 100)
 */
