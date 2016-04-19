@@ -9,3 +9,7 @@ span {
 .green {
   color: green;
 }
+
+.bgRed {
+	background-color: red;
+}

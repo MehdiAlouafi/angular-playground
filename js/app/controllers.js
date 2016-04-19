@@ -13,6 +13,11 @@ var myApp = angular.module('myApp',[])
         $scope.baseClass ='green';
 
       }
+      if($scope.caracRestant <= 10){
+      	$scope.alert ="bgRed";
+      } else {
+      	$scope.alert = "";
+      }
   	};
     $scope.paulineWinner = function(){
       if($scope.caracRestant <= 0){
