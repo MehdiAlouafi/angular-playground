@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="myApp">
 <head>
   <meta charset="UTF-8">
   <script src="js/lib/angular.min.js"></script>
@@ -7,13 +7,12 @@
   <link rel="stylesheet" href="style.css">
   <title>Angular - Workshop</title>
 </head>
-<body>
+<body ng-controller="controllerOne">
   <form>
     <textarea rows="8" cols="40" ng-model="textarea"></textarea>
     <input type="submit">
   </form>
-  <div class="carac-restant">
-    length = {{textarea.length}}
+  <div class="carac-restant" >
   </div>
   <div class="info-note">
 
