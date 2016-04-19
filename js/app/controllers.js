@@ -2,6 +2,7 @@ var myApp = angular.module('myApp',[])
   myApp.controller('controllerOne',function($scope){
     $scope.longueurMax = 100;
     $scope.compteur = function(){
+    	$scope.longueurMax--;
   	};
   });
 

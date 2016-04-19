@@ -9,12 +9,12 @@
 </head>
 <body ng-controller="controllerOne">
   <form>
-    <textarea rows="8" cols="40" ng-model="textarea"></textarea>
+    <textarea rows="8" cols="40" ng-model="textarea" ng-change="compteur()"></textarea>
     <input type="submit" value="envoyer">
     <input type="submit" value="effacer">
   </form>
   <div class="carac-restant" >
-    {{longueurMax - textarea.length}}
+    {{longueurMax}}
   </div>
   <div class="info-note">
 
