@@ -9,16 +9,14 @@ var myApp = angular.module('myApp',[])
       if($scope.caracRestant < 0){
         $scope.baseClass ='red';
 
-      } else {
-        $scope.baseClass ='green';
+      } else if($scope.caracRestant <= 10 && $scope.caracRestant >= 0){
+        $scope.baseClass ="pulse";
 
-      }
-      if($scope.caracRestant <= 10){
-      	$scope.alert ="bgRed";
       } else {
-      	$scope.alert = "";
+        $scope.baseClass ="";
+        $scope.alert = "";
       }
-  	};
+    };
     $scope.paulineWinner = function(){
       if($scope.caracRestant <= 0){
         return true
@@ -29,7 +27,6 @@ var myApp = angular.module('myApp',[])
     $scope.addText = function(){
         $scope.messageNote = $scope.textarea;
         $scope.info1 = "Note sauvegardée"
-        $scope.alertSucess = "alert-sucess";
     }
     $scope.clear = function(){
       $scope.textarea = "";
