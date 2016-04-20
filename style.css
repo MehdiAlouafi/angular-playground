@@ -64,6 +64,14 @@ h2 {
   text-align: center;
   color: #fff;
 }
+p {
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  color: #fff;
+  max-width: 250px;
+  font-size: 20px;
+  margin: 0 auto;
+}
 .carac-restant {
   font-size: 20px;
 }
