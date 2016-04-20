@@ -9,13 +9,11 @@ var myApp = angular.module('myApp',[])
       if($scope.caracRestant < 0){
         $scope.baseClass ='red';
 
-      } else {
-        $scope.baseClass ='green';
+      } else if($scope.caracRestant <= 10 && $scope.caracRestant >= 0){
+        $scope.baseClass ="pulse";
 
-      }
-      if($scope.caracRestant <= 10){
-      	$scope.alert ="bgRed";
       } else {
+        $scope.baseClass ="";
       	$scope.alert = "";
       }
   	};

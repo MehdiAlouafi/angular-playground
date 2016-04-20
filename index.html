@@ -4,21 +4,26 @@
   <meta charset="UTF-8">
   <script src="js/lib/angular.min.js"></script>
   <script src="js/app/controllers.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
   <title>Angular - Workshop</title>
 </head>
 <body ng-controller="controllerOne">
-  <form >
-    <textarea  rows="8" cols="40" ng-model="textarea" ng-change="compteur()" ng-class="alert"></textarea>
-    <input data-ng-disabled="paulineWinner()" type="submit" value="envoyer" ng-model="envoyer" ng-click="addText()">
-    <input type="submit" value="effacer" ng-click="clear()">
-  </form>
-  <div class="carac-restant" >
-    <span ng-class="baseClass"> {{caracRestant}}</span><br>
-    {{messageNote}}
+  <div class="main-wrapper">
+    <form >
+      <textarea  rows="8" cols="40" ng-model="textarea" ng-change="compteur()" ng-class="alert"></textarea>
+      <input data-ng-disabled="paulineWinner()" type="submit" value="envoyer" ng-model="envoyer" ng-click="addText()">
+      <input type="submit" value="effacer" ng-click="clear()">
+    </form>
+    <div class="carac-restant" >
+      <h1 class="green" ng-class="baseClass "> {{caracRestant}}</h1><br>
+      <h2>{{messageNote}}</h2>
     </div>
-  <div class="info-note">
-    {{info1}}
+    <div class="info-note">
+      <h2>{{info1}}</h2>
+    </div>
+
   </div>
 </body>
 </html>
