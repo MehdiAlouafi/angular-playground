@@ -8,17 +8,22 @@
   <title>Angular - Workshop</title>
 </head>
 <body ng-controller="controllerOne">
+  <div class="app-style">
+  <h4>Note Application: </h4>
   <form >
-    <textarea  rows="8" cols="40" ng-model="textarea" ng-change="compteur()" ng-class="alert"></textarea>
+    <textarea  rows="12" cols="40" ng-model="textarea" ng-change="compteur()" ng-class="alert" ng-class="alertDanger"></textarea>
+    <div class="input-area">
     <input data-ng-disabled="paulineWinner()" type="submit" value="envoyer" ng-model="envoyer" ng-click="addText()">
-    <input type="submit" value="effacer" ng-click="clear()">
+    <input type="reset" value="effacer" ng-click="clear()">
+    </div>
   </form>
   <div class="carac-restant" >
     <span ng-class="baseClass"> {{caracRestant}}</span><br>
     {{messageNote}}
     </div>
-  <div class="info-note">
+  <div class="info-note" ng-class="alertSucess">
     {{info1}}
+  </div>
   </div>
 </body>
 </html>

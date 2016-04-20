@@ -29,6 +29,7 @@ var myApp = angular.module('myApp',[])
     $scope.addText = function(){
         $scope.messageNote = $scope.textarea;
         $scope.info1 = "Note sauvegardée"
+        $scope.alertSucess = "alert-sucess";
     }
     $scope.clear = function(){
       $scope.textarea = "";
