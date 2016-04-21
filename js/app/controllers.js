@@ -8,7 +8,7 @@ var myApp = angular.module('myApp',['ngAnimate','ui.router']);
         })
       .state('application2',{
           url: '/application2',
-          templateUrl:'onverra.html'
+          templateUrl:'app02.html'
         })
 
   })
