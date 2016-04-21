@@ -1,0 +1,15 @@
+<div class="main-wrapper" ng-controller="controllerOne">
+  <form >
+    <textarea  rows="8" cols="40" ng-model="textarea" ng-change="compteur()" ng-class="alert"></textarea>
+    <input data-ng-disabled="paulineWinner()" type="submit" value="envoyer" ng-model="envoyer" ng-click="addText()">
+    <input type="submit" value="effacer" ng-click="clear()">
+  </form>
+  <div class="carac-restant" >
+    <h1 class="green" ng-class="baseClass "> {{caracRestant}}</h1><br>
+    <p>{{messageNote}}</p>
+  </div>
+  <div class="info-note">
+    <h2>{{info1}}</h2>
+  </div>
+
+</div>

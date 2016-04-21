@@ -1,5 +1,17 @@
-var myApp = angular.module('myApp',[])
-  myApp.controller('controllerOne',function($scope){
+var myApp = angular.module('myApp',['ui.router']);
+  myApp.config(function($stateProvider,$urlRouterProvider){
+    $urlRouterProvider.otherwise('/');
+    $stateProvider
+      .state('home',{
+        url: '/',
+        templateUrl:'index.html'
+      })
+      .state('about',{
+          url: '/about',
+          templateUrl:'about.html'
+        });
+  })
+  .controller('controllerOne',function($scope){
     $scope.baseClass ='';
     $scope.messageNote = '';
     $scope.longueurMax = 100;
