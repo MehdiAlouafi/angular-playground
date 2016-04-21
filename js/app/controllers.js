@@ -26,9 +26,9 @@ var myApp = angular.module('myApp',['ui.router']);
 
       } else {
         $scope.baseClass ="";
-      	$scope.alert = "";
+        $scope.alert = "";
       }
-  	};
+    };
     $scope.paulineWinner = function(){
       if($scope.caracRestant <= 0){
         return true
