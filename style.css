@@ -129,3 +129,28 @@ p {
   90.69% { transform: matrix3d(1.999, 0, 0, 0, 0, 1.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   100% { transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
 }
+
+[ui-view].ng-enter {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.3s ease;
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  transform: translateX(-100px);
+
+
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  transform: translateX(0);
+
+}

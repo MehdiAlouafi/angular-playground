@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp',['ui.router']);
+var myApp = angular.module('myApp',['ngAnimate','ui.router']);
   myApp.config(function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.otherwise('/');
     $stateProvider
