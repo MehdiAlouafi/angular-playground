@@ -5,6 +5,7 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   background-color: #575F6C;
@@ -153,4 +154,26 @@ p {
   opacity: 0;
   transform: translateX(0);
 
+}
+nav {
+  align-self: flex-start;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Varela Round';
+  display: block;
+  padding: 20px 40px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
 }

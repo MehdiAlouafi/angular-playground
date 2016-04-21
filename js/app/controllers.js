@@ -2,14 +2,15 @@ var myApp = angular.module('myApp',['ngAnimate','ui.router']);
   myApp.config(function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.otherwise('/');
     $stateProvider
-      .state('home',{
-        url: '/',
-        templateUrl:'index.html'
-      })
-      .state('about',{
-          url: '/about',
+      .state('application1',{
+          url: '/application1',
           templateUrl:'about.html'
-        });
+        })
+      .state('application2',{
+          url: '/application2',
+          templateUrl:'onverra.html'
+        })
+
   })
   .controller('controllerOne',function($scope){
     $scope.baseClass ='';
