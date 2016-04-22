@@ -6,7 +6,9 @@ body {
 
   background-color: #575F6C;
 }
-
+#test {
+  color: black !important;
+}
 .main-wrapper {
   width: 450px;
   min-height: auto;
@@ -20,7 +22,6 @@ body {
   min-height: auto;
   height: 600px;
   margin: 100px auto;
-  background-color: #fff;
 }
 
 textarea {
@@ -70,7 +71,7 @@ h2 {
   text-align: center;
   color: #fff;
 }
-p {
+.main-wrapper p {
   font-family: 'Varela Round', sans-serif;
   text-align: center;
   color: #fff;

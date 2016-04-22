@@ -51,7 +51,6 @@ var myApp = angular.module('myApp',['ngAnimate','ui.router']);
 
   });
 
-
 //Creation d'une application de note :
 // - ok Savoir combien de carac restant
 // - OK  bouton submit qui marche selon le nbr de caract
@@ -64,3 +63,7 @@ OK save() OK :Met à jour le modèle (messageNote)
 OK clear():vide messageNote
 OK compteur() :calcule le nombre de caractères restants (sur 100)
 */
+
+// Nouveau Controller ---> exercice 2
+myApp.controller('app02',function($scope){
+})
