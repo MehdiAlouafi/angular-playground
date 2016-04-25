@@ -16,11 +16,16 @@ body {
   margin: 50px auto;
 
 }
-
+.bonjour {
+  color: blue !important;
+}
+.rien {
+  color: red !important;
+}
 .main-wrapper-second {
   width: 500px;
   min-height: auto;
-  height: 600px;
+
   margin: 100px auto;
 }
 

@@ -65,5 +65,8 @@ OK compteur() :calcule le nombre de caractères restants (sur 100)
 */
 
 // Nouveau Controller ---> exercice 2
-myApp.controller('app02',function($scope){
+myApp.controller('app02',function($scope,$http){
+  $http.get('services.json').then(function(response){
+    $scope.myData = response.data;
+  })
 })

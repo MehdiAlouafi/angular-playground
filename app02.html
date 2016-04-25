@@ -4,7 +4,7 @@
 	<p>Choisissez les éléments à inclure:</p>
   <p></p>
 	</div>
-	<div class="selction-services">
+	<div ng-class="{bonjour: myData.services[0].active}" class="selction-services">
 		<p>Web Development</p>
 		<p>300</p>
 	</div>
@@ -21,7 +21,8 @@
 		<p>220</p>
 	</div>
 	<div class="total">
-		<h3>Total:</h3>
+		<h3>Total:  {{myData.services[0].name}}</h3>
+
 
 	</div>
 </div>
