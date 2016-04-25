@@ -208,25 +208,33 @@ a:hover {
 .services {
   font-family: 'Varela Round';
   color:#fff;
-  background-color: #1A2A42;
+  background-color: #471526;
   margin-top: 15px;
   padding: 10px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   border-radius: 2px;
   transform: scale(1);
+  opacity: 0.5;
 }
 .choix-services > *{
   color: #fff;
   font-family: 'Varela Round';
   font-size: 22px;
 }
+.choix-services {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+  padding: 10px 10px 30px 10px;
+  margin-bottom: 30px;
+}
 .services.bonjour {
-  background-color: #e74c3c;
+  position: relative;
+  background-color: #AB2E4C;
   box-shadow: 0 12px 15px rgba(0, 0, 0, 0.4);
   transform: scale(1.2);
   transform-origin: center;
   margin-top: 25px;
+  opacity: 1;
 }
 
 .total {
@@ -234,5 +242,7 @@ a:hover {
   font-weight: bolder;
   font-size: 22px;
   margin-top: 30px;
-  color: #2ecc71;
+  color: #FDF8E3;
+  border-top: 2px dashed rgba(255, 255, 255, 0.5);
+  padding-top: 10px;
 }
