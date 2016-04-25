@@ -67,6 +67,18 @@ OK compteur() :calcule le nombre de caractères restants (sur 100)
 // Nouveau Controller ---> exercice 2
 myApp.controller('app02',function($scope,$http){
   $http.get('services.json').then(function(response){
-    $scope.myData = response.data;
+    $scope.myData = response.data.services;
   })
+  $scope.total = 300;
+  $scope.isActive = function(){
+    if(this.item.active){
+      $scope.total -= this.item.price;
+      this.item.active = false;
+    } else {
+      $scope.total+= this.item.price;
+      this.item.active = true;
+    }
+  }
+  //Trouvez un moyen de repérer les éléments actifs dès le départ
+  // Intégrer ng-pluralize !!
 })
