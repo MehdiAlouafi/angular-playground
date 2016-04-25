@@ -2,7 +2,16 @@
 	<h1>{{name}}</h1>
 	<div class="choix-services">
 	<p>Choisissez les éléments à inclure:</p>
-  <p></p>
+  <ng-pluralize
+		count="count"
+		when="{
+			'0'  : 'Aucun séléctionné',
+			'one': 'un élément séléctionné',
+			'other' : '{} élements séléctionnés '
+		}"
+	>
+
+  </ng-pluralize>
 	</div>
 	<!-- <div ng-click="isActive()" ng-class="{bonjour: myData.services[0].active}" class="selction-services">
 		<p>{{myData.services[0].name}}</p>
@@ -20,7 +29,7 @@
 		<p>{{myData.services[3].name}}</p>
 		<p>{{myData.services[3].price}}</p>
 	</div> -->
-	<div ng-click="isActive()" ng-class="{bonjour: item.active}" class="services" ng-repeat="item in myData">
+	<div ng-click="isActive()" ng-class="{bonjour: item.active}" class="services clearfix" ng-repeat="item in myData">
 		<p>{{item.name}}</p>
 		<p>{{item.price}}</p>
 

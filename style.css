@@ -16,18 +16,11 @@ body {
   margin: 50px auto;
 
 }
-.bonjour {
-  color: blue !important;
-}
+
 .rien {
   color: red !important;
 }
-.main-wrapper-second {
-  width: 500px;
-  min-height: auto;
 
-  margin: 100px auto;
-}
 
 textarea {
   width: 100%;
@@ -166,7 +159,7 @@ h2 {
   transform: translateX(0);
 
 }
-nav {
+nav.is_open {
   position: absolute;
   top: 100px;
   left: 100px;
@@ -189,4 +182,57 @@ a {
 
 a:hover {
   color: #fff;
+}
+.main-wrapper-second {
+  width: 300px;
+  min-height: auto;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.services p:first-of-type {
+  float: left;
+
+}
+.clearfix:before,.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.services p:last-of-type{
+  float: right;
+}
+
+.services {
+  font-family: 'Varela Round';
+  color:#fff;
+  background-color: #1A2A42;
+  margin-top: 15px;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 2px;
+  transform: scale(1);
+}
+.choix-services > *{
+  color: #fff;
+  font-family: 'Varela Round';
+  font-size: 22px;
+}
+.services.bonjour {
+  background-color: #e74c3c;
+  box-shadow: 0 12px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.2);
+  transform-origin: center;
+  margin-top: 25px;
+}
+
+.total {
+  font-family: Helvetica;
+  font-weight: bolder;
+  font-size: 22px;
+  margin-top: 30px;
+  color: #2ecc71;
 }
