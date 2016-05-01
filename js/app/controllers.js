@@ -95,13 +95,38 @@ myApp.controller('app03',function($scope,$http){
     $scope.dispoItems = response.data.items;
   })
   $scope.selectAllItems = [];
+  $scope.selected = [];
   $scope.allItems = function(){
     $scope.selectAllItems = $scope.dispoItems;
   }
   $scope.allItemsRemoved = function(){
     $scope.selectAllItems = [];
   }
-  $scope.selected = function(){
-    this.item.active = true;
+  $scope.selectedIt = function(){
+    if(this.item.active === true){
+      this.item.active = false;
+      $scope.selected.pop({title:this.item.title,active: this.item.active});
+
+
+    } else {
+      this.item.active = true;
+      $scope.selected.push({title:this.item.title,active: this.item.active});
+
+    }
+    console.log($scope.selected)
+  }
+  $scope.includeIt = function(){
+    for(var i = 0; i < $scope.selected.length;i++){
+      if($scope.selected[i].active == true){
+        $scope.selectAllItems.push($scope.selected[i]);
+      }
+    }
+
+    // $scope.selectAllItems = $scope.selected;
+    // console.log($scope.selected);
+    console.log($scope.selectAllItems)
+  }
+  $scope.excludeIt= function(){
+    $scope.selectAllItems = [];
   }
 });
