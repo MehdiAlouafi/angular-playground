@@ -301,3 +301,16 @@ transition: all 0.2s ease-in-out;
 .aurevoir {
   color: red;
 }
+a[href='#/produits'] {
+  background-color: #d35400 ;
+  float: right;
+  margin-top: 30px;
+  color: #fff !important;
+  transition: all 0.3s ease-in-out;
+  padding: 15px 20px;
+  border-radius: 4px;
+}
+a[href='#/produits']:hover {
+  background-color: #e67e22;
+
+}

@@ -14,6 +14,10 @@ var myApp = angular.module('myApp',['ngAnimate','ui.router']);
           url: '/application3',
           templateUrl:'app03.html'
         })
+      .state('application3.produits',{
+        url: '/produits',
+        templateUrl: 'application3-produits.html'
+      })
 
   })
   .controller('controllerOne',function($scope){
@@ -89,11 +93,16 @@ myApp.controller('app02',function($scope,$http){
   //Trouvez un moyen de repérer les éléments actifs dès le départ
   // Intégrer ng-pluralize !!
 });
+myApp.factory("test",function(){
+      return {};
+})
+myApp.controller('app03',function($scope,$http,test){
+  $scope.test = test;
 
-myApp.controller('app03',function($scope,$http){
   $http.get('items.json').then(function(response){
     $scope.dispoItems = response.data.items;
-  })
+  });
+
   $scope.selectAllItems = [];
   $scope.selected = [];
   $scope.allItems = function(){
@@ -115,6 +124,7 @@ myApp.controller('app03',function($scope,$http){
     }
     console.log($scope.selected)
   }
+  $scope.data = {};
   $scope.includeIt = function(){
     for(var i = 0; i < $scope.selected.length;i++){
       if($scope.selected[i].active == true){
@@ -124,6 +134,8 @@ myApp.controller('app03',function($scope,$http){
 
     // $scope.selectAllItems = $scope.selected;
     // console.log($scope.selected);
+    $scope.test.trou = "John";
+    console.log($scope.test.trou)
     console.log($scope.selectAllItems)
   }
   $scope.excludeIt= function(){
