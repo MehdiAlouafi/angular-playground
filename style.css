@@ -255,7 +255,6 @@ a:hover {
   width: 1200px;
   max-width: 100%;
   height: 350px;
-  background-color: blue;
   margin: 0 auto;
 }
 
@@ -267,7 +266,6 @@ a:hover {
 .produits {
   height: 100%;
   width: 40%;
-  background-color: red;
   padding: 50px;
   line-height: 1.7;
   font-family: 'Source sans pro', helvetica;
@@ -276,4 +274,18 @@ a:hover {
 .controls {
   width: 20%;
   text-align: center;
+  padding-top: 25px;
+  color: #fff;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.controls li {
+  background-color: #3498db;
+margin-top: 15px;
+border-radius: 4px;}
+
+.controls i {
+  display: block;
+  padding: 20px;
+  cursor: pointer;
 }
