@@ -3,17 +3,25 @@
   <div class="container">
     <div class="produits produits-dispo">
       <ul>
-        <li ng-repeat="item in dispoItems">{{item.title}}</li>
+        <li ng-click="selected()" ng-class="{aurevoir: item.active}" ng-repeat="item in dispoItems" >{{item.title}}</li>
       </ul>
     </div>
     <div class="controls">
       <ul>
         <li><i class="fa fa-step-forward" aria-hidden="true"></i></li>
-        <li><i class="fa fa-fast-forward" aria-hidden="true"></i></li>
+        <li><i class="fa fa-fast-forward" aria-hidden="true"
+          ng-click="allItems()"
+        ></i></li>
         <li><i class="fa fa-step-backward" aria-hidden="true"></i></li>
-        <li><i class="fa fa-fast-backward" aria-hidden="true"></i></li>
+        <li><i class="fa fa-fast-backward" aria-hidden="true"
+          ng-click="allItemsRemoved()"
+        ></i></li>
       </ul>
     </div>
-    <div class="produits produits-select"></div>
+    <div class="produits produits-select">
+      <ul>
+        <li ng-repeat="item in selectAllItems">{{item.title}}</li>
+      </ul>
+    </div>
   </div>
 </div>

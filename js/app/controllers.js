@@ -94,5 +94,14 @@ myApp.controller('app03',function($scope,$http){
   $http.get('items.json').then(function(response){
     $scope.dispoItems = response.data.items;
   })
-
+  $scope.selectAllItems = [];
+  $scope.allItems = function(){
+    $scope.selectAllItems = $scope.dispoItems;
+  }
+  $scope.allItemsRemoved = function(){
+    $scope.selectAllItems = [];
+  }
+  $scope.selected = function(){
+    this.item.active = true;
+  }
 });
