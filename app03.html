@@ -1,0 +1,19 @@
+<div class="main-wrapper-third slide" ng-controller="app03">
+  <h2>Sélectionnez vos produits:</h2>
+  <div class="container">
+    <div class="produits produits-dispo">
+      <ul>
+        <li ng-repeat="item in dispoItems">{{item.title}}</li>
+      </ul>
+    </div>
+    <div class="controls">
+      <ul>
+        <li><i class="fa fa-step-forward" aria-hidden="true"></i></li>
+        <li><i class="fa fa-fast-forward" aria-hidden="true"></i></li>
+        <li><i class="fa fa-step-backward" aria-hidden="true"></i></li>
+        <li><i class="fa fa-fast-backward" aria-hidden="true"></i></li>
+      </ul>
+    </div>
+    <div class="produits produits-select"></div>
+  </div>
+</div>

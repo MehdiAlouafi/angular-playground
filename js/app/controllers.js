@@ -10,6 +10,10 @@ var myApp = angular.module('myApp',['ngAnimate','ui.router']);
           url: '/application2',
           templateUrl:'app02.html'
         })
+      .state('application3',{
+          url: '/application3',
+          templateUrl:'app03.html'
+        })
 
   })
   .controller('controllerOne',function($scope){
@@ -84,4 +88,11 @@ myApp.controller('app02',function($scope,$http){
   }
   //Trouvez un moyen de repérer les éléments actifs dès le départ
   // Intégrer ng-pluralize !!
-})
+});
+
+myApp.controller('app03',function($scope,$http){
+  $http.get('items.json').then(function(response){
+    $scope.dispoItems = response.data.items;
+  })
+
+});
