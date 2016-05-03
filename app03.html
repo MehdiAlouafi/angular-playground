@@ -24,7 +24,7 @@
     </div>
     <div class="produits produits-select">
       <ul>
-        <li ng-repeat="item in selectAllItems track by $index">{{item.title}}</li>
+        <li ng-click="selectedIt()" ng-class="{bipbip: item.active}" ng-repeat="item in selectAllItems track by $index">{{item.title}}</li>
       </ul>
     </div>
     <a ui-sref=".produits">Allez voir vos produits...</a>

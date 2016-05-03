@@ -114,17 +114,16 @@ myApp.controller('app03',function($scope,$http,test){
   $scope.selectedIt = function(){
     if(this.item.active === true){
       this.item.active = false;
-      $scope.selected.pop({title:this.item.title,active: this.item.active});
+      $scope.selected.pop({title:this.item.title,active: this.item.active,image:this.item.image,url:this.item.url});
 
 
     } else {
       this.item.active = true;
-      $scope.selected.push({title:this.item.title,active: this.item.active});
+      $scope.selected.push({title:this.item.title,active: this.item.active,url:this.item.image,});
 
     }
     console.log($scope.selected)
   }
-  $scope.data = {};
   $scope.includeIt = function(){
     for(var i = 0; i < $scope.selected.length;i++){
       if($scope.selected[i].active == true){
@@ -135,10 +134,14 @@ myApp.controller('app03',function($scope,$http,test){
     // $scope.selectAllItems = $scope.selected;
     // console.log($scope.selected);
     $scope.test.trou = "John";
-    console.log($scope.test.trou)
     console.log($scope.selectAllItems)
   }
   $scope.excludeIt= function(){
-    $scope.selectAllItems = [];
+    for(var j = 0; j < $scope.selectAllItems.length;j++){
+      if($scope.selectAllItems[j].active == true){
+        $scope.selectAllItems.pop($scope.selectAllItems[j]);
+      }
+    }
+
   }
 });
