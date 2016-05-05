@@ -1,3 +1,4 @@
+'use strict'
 var myApp = angular.module('myApp',['ngAnimate','ui.router']);
   myApp.config(function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.otherwise('/');
@@ -98,7 +99,6 @@ myApp.factory("test",function(){
 })
 myApp.controller('app03',function($scope,$http,test){
   $scope.test = test;
-
   $http.get('items.json').then(function(response){
     $scope.dispoItems = response.data.items;
   });
@@ -107,6 +107,7 @@ myApp.controller('app03',function($scope,$http,test){
   $scope.selected = [];
   $scope.allItems = function(){
     $scope.selectAllItems = $scope.dispoItems;
+
   }
   $scope.allItemsRemoved = function(){
     $scope.selectAllItems = [];
@@ -114,20 +115,17 @@ myApp.controller('app03',function($scope,$http,test){
   $scope.selectedIt = function(){
     if(this.item.active === true){
       this.item.active = false;
-      $scope.selected.pop({title:this.item.title,active: this.item.active,image:this.item.image,url:this.item.url});
 
 
     } else {
       this.item.active = true;
-      $scope.selected.push({title:this.item.title,active: this.item.active,url:this.item.image,});
 
     }
-    console.log($scope.selected)
   }
   $scope.includeIt = function(){
-    for(var i = 0; i < $scope.selected.length;i++){
-      if($scope.selected[i].active == true){
-        $scope.selectAllItems.push($scope.selected[i]);
+    for(var i = 0; i < $scope.dispoItems.length;i++){
+      if($scope.dispoItems[i].active == true){
+        $scope.selectAllItems.push($scope.dispoItems[i]);
       }
     }
 
@@ -136,10 +134,21 @@ myApp.controller('app03',function($scope,$http,test){
     $scope.test.trou = "John";
     console.log($scope.selectAllItems)
   }
+
   $scope.excludeIt= function(){
-    for(var j = 0; j < $scope.selectAllItems.length;j++){
-      if($scope.selectAllItems[j].active == true){
-        $scope.selectAllItems.pop($scope.selectAllItems[j]);
+    $scope.stase = [];
+    for(let j = 0; j < $scope.selectAllItems.length;j++){
+      if($scope.selectAllItems[j].active === false){
+        $scope.selectAllItems[j] = "";
+        // console.log('lol');
+        // $scope.stase.push($scope.selectAllItems[j]);
+        // console.log($scope.stase);
+        // for(var zob = 0; zob < $scope.stase.length; zob++){
+        //   if($scope.stase[zob] === $scope.selectAllItems[j]){
+        //
+        //   }
+        // }
+
       }
     }
 
