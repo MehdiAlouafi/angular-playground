@@ -95,16 +95,15 @@ myApp.controller('app02',function($scope,$http){
   // Intégrer ng-pluralize !!
 });
 myApp.factory("test",function(){
-      return {};
+      return [];
 })
 myApp.controller('app03',function($scope,$http,test){
-  $scope.test = test;
+  $scope.myOverAllData = test;
   $http.get('items.json').then(function(response){
     $scope.dispoItems = response.data.items;
   });
 
   $scope.selectAllItems = [];
-  $scope.selected = [];
   $scope.allItems = function(){
     $scope.selectAllItems = $scope.dispoItems;
 
@@ -122,6 +121,26 @@ myApp.controller('app03',function($scope,$http,test){
 
     }
   }
+  $scope.comeOn = function(){
+    // $scope.$apply(finalFunction());
+    $scope.myOverAllData = [];
+    console.log($scope.myOverAllData);
+  }
+  $scope.finalFunction = function(){
+    console.log($scope.myOverAllData);
+    console.log($scope.selectAllItems);
+    for(let final = 0; final < $scope.selectAllItems.length;final++){
+      // console.log("bonjour");
+
+      $scope.myOverAllData.push(
+        {
+          url: $scope.selectAllItems[final].url,
+          image: $scope.selectAllItems[final].image,
+          title: $scope.selectAllItems[final].title
+        }
+      )
+    }
+  }
   $scope.includeIt = function(){
     for(var i = 0; i < $scope.dispoItems.length;i++){
       if($scope.dispoItems[i].active == true){
@@ -129,9 +148,10 @@ myApp.controller('app03',function($scope,$http,test){
       }
     }
 
+
     // $scope.selectAllItems = $scope.selected;
     // console.log($scope.selected);
-    $scope.test.trou = "John";
+    // $scope.myOverAllData['title'] = "John";
     console.log($scope.selectAllItems)
   }
 

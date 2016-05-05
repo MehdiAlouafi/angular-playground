@@ -1,5 +1,7 @@
-<div class="test" ng-controller="app03">
-<p ng-repeat="trou in test">
-  {{trou}}
-</p>
+<div class="final-products-container" ng-controller="app03">
+ <a ng-click="comeOn()"ui-sref="application3" id="final-blow"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+<div class="final-products"ng-repeat="trou in myOverAllData">
+  <img ng-src="{{trou.image}}" alt="">
+  <a href="{{trou.url}}">{{trou.title}}</a>
+</div>
 </div>

@@ -27,6 +27,6 @@
         <li ng-click="selectedIt()" ng-class="{bipbip: item.active}" ng-repeat="item in selectAllItems track by $index">{{item.title}}</li>
       </ul>
     </div>
-    <a ui-sref=".produits">Allez voir vos produits...</a>
+    <a ng-click="finalFunction()"ui-sref=".produits">Allez voir vos produits...</a>
   </div>
 </div>
